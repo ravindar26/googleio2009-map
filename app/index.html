@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html lang="en">
+<!--
+  Copyright 2009 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Google I/O - Interactive Conference Map</title>
+  <link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/reset/reset-min.css"/>
+  <link rel="stylesheet" media="screen" href="css/screen.css"/>
+  <script type="text/javascript" src="http://www.google.com/jsapi?key=_____INSERT_YOUR_OWN_KEY_____&amp;autoload=%7B%22modules%22%3A%5B%7B%22name%22%3A%22maps%22%2C%22version%22%3A%222%22%7D%2C%7B%22name%22%3A%22jquery%22%2C%22version%22%3A%221.3%22%7D%2C%7B%22name%22%3A%22friendconnect%22%2C%22version%22%3A%221%22%7D%5D%7D"></script>
+  <script type="text/javascript" src="js/content.js"></script>
+  <script type="text/javascript" src="js/mallmaptilelayer.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+</head>
+<body onload="init()">
+  <div id="container">
+    <div class="section" id="top">
+      <a id="io-logo" href="/events/io/"><span>Google I/O</span></a>
+      <h1><span>Interactive Conference Map</span></h1>
+    </div>
+    
+    <div class="section" id="middle">
+      <b class="corner tl"></b>
+      <b class="corner tr"></b>
+      <b class="corner bl"></b>
+      <b class="corner br"></b>
+      
+      <div id="toolbox-container">
+        <div id="toolbox">
+          <div class="item" id="label-level"><span>Level</span></div>
+          <a class="item level-button sprite-toggle" id="btn-level1" href="#" onclick="switchLevel(1); return false;"><span>Level 1</span></a>
+          <a class="item level-button sprite-toggle" id="btn-level2" href="#" onclick="switchLevel(2); return false;"><span>Level 2</span></a>
+          <a class="item level-button sprite-toggle" id="btn-level3" href="#" onclick="switchLevel(3); return false;"><span>Level 3</span></a>
+        </div>
+        <b class="corner tr"></b>
+      </div>
+      
+      <div id="map_container">
+        <div id="map_canvas"></div>
+      </div>
+    </div>
+    
+    <div class="section" id="bottom">
+      <div id="learn-more">
+        <a href="/apis/maps">
+          Developers: Learn more about the Google Maps API
+        </a>
+      </div>
+      
+      <div id="copyright">
+        &copy;2009 Google
+      </div>
+    </div>
+  </div>
+
+  <!-- Analytics tracking code here -->
+</body>
+</html>
